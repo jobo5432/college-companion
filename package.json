@@ -4,19 +4,18 @@
   "description": "A reactjs/redux port of the once-popular internet game 'MetaSquares'.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Jim Hoy (jim.hoy@gmail.com)",
-  "license": "MIT",
-  "scripts": {
     "prestart": "babel-node tools/startMessage.js",
-    "start": "npm-run-all --parallel open:src lint:watch test:watch",
+    "start": "npm-run-all --parallel open:src lint:watch test:watch scss:watch",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
+    "scss": "node-sass --output-style compressed -o src/dist/css src/site.scss",
+    "scss:watch": "npm run scss -- --watch",
     "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
+  "author": "Jim Hoy (jim.hoy@gmail.com)",
+  "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.20.0",
     "bootstrap": "^3.3.7",
@@ -57,6 +56,7 @@
     "jsdom": "^9.9.1",
     "mocha": "^3.2.0",
     "nock": "^9.0.2",
+    "node-sass": "^4.3.0",
     "npm-run-all": "^4.0.0",
     "open": "0.0.5",
     "react-addons-test-utils": "^15.4.2",
