@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
-    "start": "npm-run-all --parallel open:src lint:watch test:watch scss:watch",
+    "start": "npm-run-all --parallel lint scss test open:src lint:watch test:watch scss:watch",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
-    "scss": "node-sass --output-style compressed -o src/dist/css src/site.scss",
+    "scss": "node-sass --output-style expanded -o src/styles src/site.scss",
     "scss:watch": "npm run scss -- --watch",
     "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
@@ -30,6 +30,7 @@
     "toastr": "^2.1.2"
   },
   "devDependencies": {
+    "autoprefixer": "^6.6.1",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
@@ -59,6 +60,7 @@
     "node-sass": "^4.3.0",
     "npm-run-all": "^4.0.0",
     "open": "0.0.5",
+    "postcss-cli": "^2.6.0",
     "react-addons-test-utils": "^15.4.2",
     "redux-immutable-state-invariant": "^1.2.4",
     "redux-mock-store": "^1.2.1",
