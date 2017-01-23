@@ -6,6 +6,7 @@
 /* FONT PATH
  * -------------------------- */
 @import url(../../node_modules/bootstrap/dist/css/bootstrap.min.css);
+@import url(../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css);
 @font-face {
   font-family: 'FontAwesome';
   src: url("../../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
