@@ -5,8 +5,7 @@ class AboutPage extends React.Component{
         return(
             <div>
                 <h1>About</h1>
-                <p>This is a react.js implementation (with lots of other technologies too!) of the once-popular game
-                    called 'MetaSquares'.
+                <p>This is College-Companion (the working title). Wait and see.
                 </p>
             </div>
         );

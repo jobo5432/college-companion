@@ -1,12 +1,110 @@
 @charset "UTF-8";
+/* Site-specifi libs */
+/* Main Palette */
+/* front porch (non-portal) pages */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600,700");
+@import url(../../node_modules/bootstrap/dist/css/bootstrap.min.css);
+body {
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.front-porch-navbar {
+  background-color: #fefefe;
+  border-bottom: solid 1px #dadada;
+}
+
+.container-fluid {
+  padding: 0px !important;
+  margin: 0;
+}
+
+.container-fluid nav {
+  border-radius: 0px;
+  margin: 0 !important;
+}
+
+.container-fluid nav a {
+  color: #757575;
+}
+
+.container-fluid nav .active-link {
+  color: #FF4081 !important;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.banner {
+  background: url(../static/homepage-banner.jpg) repeat center center;
+  background-size: cover;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+.banner .content {
+  padding-top: 180px;
+  height: 700px;
+  color: #FFFFFF;
+}
+
+.banner .content .call-to-action {
+  background-color: rgba(0, 0, 0, 0.75);
+  min-height: 250px;
+  padding: 0px 36px 36px 36px;
+}
+
+.banner .content .call-to-action h1 {
+  font-size: 4.5rem;
+  color: #B3E5FC;
+}
+
+.banner .content .call-to-action h1 .highlight {
+  color: #FF4081;
+}
+
+.banner .content .call-to-action h2 {
+  font-size: 2.25rem;
+}
+
+.banner .content .call-to-action .form {
+  margin-top: 48px;
+}
+
+.banner .content .call-to-action .form div {
+  padding-right: 0px;
+}
+
+.banner .content .call-to-action .form .no-left-margin {
+  margin-left: 0;
+}
+
+.banner .content .btn-home {
+  background-color: #FF4081;
+}
+
+.banner .content .add-school-container {
+  margin-top: 28px;
+  border-bottom: solid 0.025rem rgba(255, 255, 255, 0.76);
+  margin-left: 12px;
+}
+
+.banner .content .add-school-container a {
+  color: #FFFFFF;
+  font-size: 1.55rem;
+  text-decoration: none;
+}
+
+/* 3rd party (vendor) libs below */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
-@import url(../../node_modules/bootstrap/dist/css/bootstrap.min.css);
-@import url(../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css);
 @font-face {
   font-family: 'FontAwesome';
   src: url("../../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");

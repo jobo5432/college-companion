@@ -4,7 +4,7 @@
 @import "./palette";
 
 //components
-@import "components/home";
+@import "components/home/Homepage.component";
 
 
 /* 3rd party (vendor) libs below */
@@ -15,4 +15,4 @@ $fa-font-path: "../../node_modules/font-awesome/fonts";
 
 //bootstrap
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css";
+//@import "../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css";

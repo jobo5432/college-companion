@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,700');
+
+body{
+  background-color: $front-porch-background;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.front-porch-navbar{
+  background-color: $front-porch-navbar-background;
+  border-bottom: solid 1px $front-porch-navbar-border;
+}
+
+.container-fluid{
+  padding: 0px !important;
+  margin: 0;
+
+  nav{
+    border-radius: 0px;
+    margin: 0 !important;
+
+    a{
+      color: $navbar-link;
+    }
+
+    .active-link{
+      color: $navbar-link-active !important;
+    }
+
+  }
+}
+
+.inline{
+  display: inline-block;
+}
+
+.banner {
+  background: url(../static/homepage-banner.jpg) repeat center center;
+  background-size: cover;
+
+  border-radius: 0 !important;
+  margin: 0 !important;
+
+  .content {
+    padding-top: 180px;
+    height: 700px;
+    color: $primary-color-text;
+
+    .call-to-action{
+      background-color: rgba(0, 0, 0, 0.75);
+      min-height: 250px;
+      padding: 0px 36px 36px 36px;
+
+      h1{
+        font-size: 4.5rem;
+        color: $primary-color-light;
+
+        .highlight{
+          color: $accent-color;
+        }
+
+      }
+
+      h2 {
+        font-size: 2.25rem;
+      }
+
+      .form{
+        margin-top: 48px;
+
+        div{
+          padding-right: 0px;
+        }
+
+        .no-left-margin{
+          margin-left: 0;
+        }
+      }
+
+    }
+
+    .btn-home{
+      background-color: $accent-color;
+    }
+
+    .add-school-container{
+      margin-top: 28px;
+      border-bottom: solid 0.025rem rgba(255,255,255,0.76);
+      margin-left: 12px;
+
+      a{
+        color: $primary-color-text;
+        font-size: 1.55rem;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+}

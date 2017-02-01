@@ -18,7 +18,6 @@ class CoursePage extends React.Component{
         const course = this.state.course;
         course.title = event.target.value;
         this.setState({course: course });
-        console.log(this.state);
     }
 
     onClickSave(){
