@@ -8,11 +8,11 @@ const Header = () => {
                 <div className="navbar-header">
                     <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span className="sr-only">Toggle navigation</span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
+                        <span className="icon-bar" />
+                        <span className="icon-bar" />
+                        <span className="icon-bar" />
                     </button>
-                    <a className="navbar-brand" href="#">[College Companion]</a>
+                    <IndexLink to="/" className="navbar-brand" activeClassName="active-link">[College Companion]</IndexLink>
                 </div>
 
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -20,6 +20,7 @@ const Header = () => {
                         <li><IndexLink to="/" activeClassName="active-link">Home</IndexLink></li>
                         <li><Link to="/about" activeClassName="active-link">About</Link></li>
                         <li><Link to="/contact" activeClassName="active-link">Contact</Link></li>
+                        <li><Link to="/courses" activeClassName="active-link">*Courses*</Link></li>
                     </ul>
                 </div>
         </nav>

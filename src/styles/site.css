@@ -4,6 +4,7 @@
 /* front porch (non-portal) pages */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600,700");
 @import url(../../node_modules/bootstrap/dist/css/bootstrap.min.css);
+@import url(../../node_modules/react-select/dist/react-select.css);
 body {
   background-color: #fafafa;
   margin: 0;
@@ -39,14 +40,15 @@ body {
 }
 
 .banner {
-  background: url(../static/homepage-banner.jpg) repeat center center;
+  background: url(../static/homepage-2.jpg) repeat center center;
   background-size: cover;
   border-radius: 0 !important;
   margin: 0 !important;
+  border-bottom: solid 1px #BDBDBD;
 }
 
 .banner .content {
-  padding-top: 180px;
+  padding-top: 110px;
   height: 700px;
   color: #FFFFFF;
 }

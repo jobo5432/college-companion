@@ -36,14 +36,18 @@ body{
 }
 
 .banner {
-  background: url(../static/homepage-banner.jpg) repeat center center;
+  $imgKey: random(2);
+
+
+  background: url(../static/home-2.jpg) repeat center center;
   background-size: cover;
 
   border-radius: 0 !important;
   margin: 0 !important;
+  border-bottom: solid 1px $divider-color;
 
   .content {
-    padding-top: 180px;
+    padding-top: 110px;
     height: 700px;
     color: $primary-color-text;
 
