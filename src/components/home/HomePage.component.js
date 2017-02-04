@@ -30,7 +30,6 @@ class HomePage extends React.Component{
     }
 
     render() {
-        //<input type="text" className="form-control input-lg" placeholder="Find your school..." />
         return(
             <div>
                 <div className="jumbotron banner">

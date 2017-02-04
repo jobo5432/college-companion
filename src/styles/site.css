@@ -40,7 +40,7 @@ body {
 }
 
 .banner {
-  background: url(../static/homepage-2.jpg) repeat center center;
+  background: url(../static/home-2.jpg) repeat center center;
   background-size: cover;
   border-radius: 0 !important;
   margin: 0 !important;
