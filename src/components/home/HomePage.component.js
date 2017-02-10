@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -97,3 +98,21 @@ function mapStateToProps(state, ownProps) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+=======
+import React from 'react';
+import { Link } from 'react-router';
+
+class HomePage extends React.Component{
+    render() {
+        return(
+            <div className="jumbotron">
+                <h1>MetaSquares</h1>
+                <h2>... in React.js & Redux</h2>
+                <Link to="about" className="btn btn-primary btn-lg">Learn more</Link>
+            </div>
+        );
+    }
+}
+
+export default HomePage;
+>>>>>>> c9df4a5d043fc9ca5d04883fc0f347a21621c544

@@ -4,6 +4,7 @@ import { Link, IndexLink } from 'react-router';
 
 const Header = () => {
     return(
+<<<<<<< HEAD
         <nav className="navbar front-porch-navbar">
                 <div className="navbar-header">
                     <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -23,6 +24,12 @@ const Header = () => {
                         <li><Link to="/courses" activeClassName="active-link">*Courses*</Link></li>
                     </ul>
                 </div>
+=======
+        <nav>
+            <IndexLink to="/" activeClassName="active">Home</IndexLink>
+            {" | "}
+            <Link to="/about" activeClassName="active">About</Link>
+>>>>>>> c9df4a5d043fc9ca5d04883fc0f347a21621c544
         </nav>
     );
 };

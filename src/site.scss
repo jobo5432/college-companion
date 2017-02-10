@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Site-specifi libs */
 
 //global colors
@@ -9,13 +10,19 @@
 
 /* 3rd party (vendor) libs below */
 
+=======
+>>>>>>> c9df4a5d043fc9ca5d04883fc0f347a21621c544
 //font awesome
 $fa-font-path: "../../node_modules/font-awesome/fonts";
 @import "../node_modules/font-awesome/scss/font-awesome";
 
 //bootstrap
+<<<<<<< HEAD
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 //@import "../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css";
 
 //react-select
 @import "../../node_modules/react-select/dist/react-select.css";
+=======
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+>>>>>>> c9df4a5d043fc9ca5d04883fc0f347a21621c544
