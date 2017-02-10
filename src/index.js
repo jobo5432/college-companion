@@ -7,9 +7,11 @@ import configureStore from './store/configureStore';
 import {Provider} from 'react-redux';
 import { Router, browserHistory} from 'react-router';
 import routes from './routes';
+import {loadInstitutions} from './actions/institutionActions';
 import './styles/site.css';
 
 const store = configureStore();
+store.dispatch(loadInstitutions());
 
 render(
     <Provider store={store}>
