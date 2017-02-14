@@ -1,4 +1,3 @@
-import InstitutionApi from '../api/mockInstitutionApi';
 import {institutionActions} from '../constants/actionTypes';
 
 export default function institutionReducer(state = [], action){

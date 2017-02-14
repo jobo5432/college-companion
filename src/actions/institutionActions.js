@@ -1,4 +1,6 @@
 import InstitutionApi from '../api/mockInstitutionApi';
+//import InstitutionApi from '../api/institutionApi';
+
 import {institutionActions} from '../constants/actionTypes';
 
 export function loadInstitutionsSuccess(institutions) {
@@ -18,6 +20,7 @@ export function goToInstitutionSuccess(institution){
 export function loadInstitutions() {
   return dispatch => {
     return InstitutionApi.getAllInistitutions().then(institutions => {
+      console.log(institutions);
       dispatch(loadInstitutionsSuccess(institutions));
     }).catch(error => {
       dispatch(loadInstitutionsError(error));
