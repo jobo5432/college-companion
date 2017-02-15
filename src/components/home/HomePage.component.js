@@ -9,12 +9,12 @@ class HomePage extends React.Component {
     super(props, context);
     this.state = {
       selectedInstitution: {},
-      institutions: this.props.institutions.map((institution) => {
+      institutions       : this.props.institutions.map((institution) => {
         return {value: institution.id, label: institution.name};
       })
     };
 
-    this.logChange = this.logChange.bind(this);
+    this.logChange       = this.logChange.bind(this);
     this.goToInstitution = this.goToInstitution.bind(this);
   }
 
@@ -34,7 +34,13 @@ class HomePage extends React.Component {
 
   goToInstitution() {
     if (this.state.selectedInstitution) {
-      this.props.actions.goToInstitution(this.state.selectedInstitution);
+      let id = this.state.selectedInstitution.value;
+
+      this.props.actions.getInstitution(id).then(institution => {
+        this.context.router.push(`/college/${institution.subdomain}`);
+      }).catch(error => {
+        //handle error
+      });
     }
   }
 
@@ -79,9 +85,14 @@ class HomePage extends React.Component {
   }
 }
 
+HomePage.contextTypes = {
+  router: React.PropTypes.object
+};
+
 HomePage.propTypes = {
-  actions: PropTypes.object.isRequired,
+  actions     : PropTypes.object.isRequired,
   institutions: PropTypes.array.isRequired,
+  insitution  : PropTypes.object
 };
 
 function mapDispatchToProps(dispatch) {

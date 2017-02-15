@@ -4,13 +4,13 @@ import App from './components/App';
 import HomePage from './components/home/HomePage.component';
 import AboutPage from './components/about/AboutPage.component';
 import ContactPage from './components/contact/ContactPage.component';
-import CoursesPage from './components/courses/CoursesPage.component';
+import CollegePage from './components/college/CollegePage.component';
 
 export default (
     <Route path="/" component={App}>
         <IndexRoute components={HomePage}/>
         <Route path="about" component={AboutPage} />
         <Route path="contact" component={ContactPage} />
-        <Route path="courses" component={CoursesPage} />
+        <Route path="college/:subdomain" component={CollegePage} />
     </Route>
 );

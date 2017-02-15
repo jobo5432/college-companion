@@ -1,26 +1,29 @@
 import InstitutionApi from '../api/mockInstitutionApi';
 //import InstitutionApi from '../api/institutionApi';
 
-import {institutionActions} from '../constants/actionTypes';
+import * as institutionActions from '../constants/actionTypes';
 
 export function loadInstitutionsSuccess(institutions) {
 
-  return {type: institutionActions.GET_ALL_INSTITUTIONS_SUCCESS, institutions: institutions};
+  return {type: institutionActions.INSTITUTIONS_GET_ALL_SUCCESS, institutions: institutions};
 }
 
 export function loadInstitutionsError(error) {
-  return {type: institutionActions.GET_ALL_INSTITUTIONS_ERROR, error: error};
+  return {type: institutionActions.INSTITUTIONS_GET_ALL_ERROR, error: error};
 }
 
-export function goToInstitutionSuccess(institution){
-  return {type: institutionActions.GO_TO_INSTITUTION_SUCCESS, institution: institution};
+export function loadSingleInstitutionSuccess(institution){
+  return {type: institutionActions.INSTITUTION_GET_SUCCESS, institution: institution};
+}
+
+export function loadSingleInstitutionError(error){
+  return {type: institutionActions.INSTITUTION_GET_ERROR, error: error};
 }
 
 /* THUNKS */
 export function loadInstitutions() {
   return dispatch => {
     return InstitutionApi.getAllInistitutions().then(institutions => {
-      console.log(institutions);
       dispatch(loadInstitutionsSuccess(institutions));
     }).catch(error => {
       dispatch(loadInstitutionsError(error));
@@ -28,9 +31,12 @@ export function loadInstitutions() {
   };
 }
 
-export function goToInstitution(institution){
+export function getInstitution(id){
   return dispatch => {
-    alert("We're going to " + institution.label);
-    dispatch(goToInstitutionSuccess(institution));
+    return InstitutionApi.getSingleInstitution(id).then( institution =>{
+      return institution;
+    }).catch(error =>{
+      dispatch(loadSingleInstitutionError(error));
+    })
   };
 }

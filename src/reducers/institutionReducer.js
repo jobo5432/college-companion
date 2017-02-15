@@ -1,11 +1,14 @@
-import {institutionActions} from '../constants/actionTypes';
+import * as institutionActions from '../constants/actionTypes';
 
-export default function institutionReducer(state = [], action){
-    switch(action.type) {
-        case institutionActions.GET_ALL_INSTITUTIONS_SUCCESS:
-            return action.institutions;
+export default function institutionReducer(state = [], action) {
+  switch (action.type) {
+    case institutionActions.INSTITUTIONS_GET_ALL_SUCCESS:
+      return action.institutions;
 
-        default:
-            return state;
-    }
+    case institutionActions.INSTITUTION_GET_SUCCESS:
+      return action.institution;
+
+    default:
+      return state;
+  }
 }

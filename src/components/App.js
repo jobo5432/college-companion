@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import Header from './common/Header.component';
+import InstitutionApi from '../api/mockInstitutionApi';
 
 class App extends React.Component {
   render() {

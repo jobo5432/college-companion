@@ -1,5 +1,5 @@
 import delay from './delay';
-
+import _ from 'underscore';
 
 const institutions = [
     {id: 1, subdomain: 'faber', name: 'Faber College'},
@@ -28,6 +28,21 @@ class InstitutionApi{
             }, delay);
         });
     }
+
+  static getSingleInstitution(id){
+    return new Promise((resolve, reject) =>{
+      setTimeout(() =>{
+        let institution = _.find(institutions, (institution) =>{
+          if(Number.isInteger(id)){
+            return institution.id === id;
+          }
+
+          return institution.subdomain === id;
+        });
+        resolve(Object.assign({}, institution));
+      }, delay);
+    });
+  }
 }
 
 export default InstitutionApi;
