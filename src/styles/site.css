@@ -100,6 +100,28 @@ body {
   text-decoration: none;
 }
 
+.full-cover-bg {
+  z-index: 2147483637;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.75);
+  color: #ffffff;
+}
+
+.full-cover-bg .loading-container {
+  margin-top: 15%;
+}
+
+.full-cover-bg .loading-container .txt {
+  font-weight: 600;
+  margin-top: 14px;
+  color: #212121;
+}
+
 /* 3rd party (vendor) libs below */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome

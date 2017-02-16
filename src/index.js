@@ -11,6 +11,11 @@ import {loadInstitutions} from './actions/institutionActions';
 import './styles/site.css';
 
 const store = configureStore();
+
+/*let unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+);*/
+
 store.dispatch(loadInstitutions());
 
 render(

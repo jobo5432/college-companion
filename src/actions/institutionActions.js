@@ -4,7 +4,6 @@ import InstitutionApi from '../api/mockInstitutionApi';
 import * as institutionActions from '../constants/actionTypes';
 
 export function loadInstitutionsSuccess(institutions) {
-
   return {type: institutionActions.INSTITUTIONS_GET_ALL_SUCCESS, institutions: institutions};
 }
 
@@ -37,6 +36,6 @@ export function getInstitution(id){
       return institution;
     }).catch(error =>{
       dispatch(loadSingleInstitutionError(error));
-    })
+    });
   };
 }
