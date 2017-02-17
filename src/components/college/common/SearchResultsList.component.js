@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../../common/Card.component';
 
-export default function SearchResultsList(props){
+const SearchResultsList = props =>{
   let count = 10;
   let cards = [];
   let styles = ['property', 'school-supplies', 'other'];
@@ -12,4 +12,8 @@ export default function SearchResultsList(props){
   }
 
   return(<div className="row">{cards}</div>);
-}
+};
+
+SearchResultsList.propTypes = {};
+
+export default SearchResultsList;

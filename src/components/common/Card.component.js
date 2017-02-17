@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import camera from '../../static/camera.svg';
 
-export default function Card(props) {
+const Card = props => {
   let indicatorClass = `card-type-indicator ${props.indicatorStyle}`;
   let icon = '';
 
-  switch(props.indicatorStyle.toLowerCase()){
+  switch(props.indicatorStyle){
     case 'property':
       icon = 'fa fa-home';
       break;
@@ -25,10 +25,16 @@ export default function Card(props) {
       <div className="card-container">
         <div className={indicatorClass}><i className={icon} /></div>
         <div className="content">
-          <div><strong>[{props.indicatorStyle.toLowerCase()}]</strong></div>
+          <div><strong>[{props.indicatorStyle}]</strong></div>
           <div>[{icon}]</div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+Card.propTypes = {
+  indicatorStyle: PropTypes.string.isRequired
+};
+
+export default Card;

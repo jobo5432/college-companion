@@ -47,6 +47,7 @@ class CollegePage extends React.Component {
     return (
       <div>
         <div className="container-fluid">
+          <div className="row"><h3>Welcome to {this.state.institution.name}!</h3></div>
           <div className="row">
             <MainNavigation/>
           </div>

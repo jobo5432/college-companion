@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function MainNavigation(props){
+const MainNavigation = props =>{
   return(
     <div className="main-navigation">
         [main navigation]
     </div>
   );
-}
+};
+
+MainNavigation.propTypes = {};
+
+export default MainNavigation;
