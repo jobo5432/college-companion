@@ -1,63 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,700');
 
-body{
+body {
   background-color: $front-porch-background;
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif !important;
+  margin:           0;
+  padding:          0;
+  font-family:      'Open Sans', sans-serif !important;
 }
 
-.front-porch-navbar{
-  background-color: $front-porch-navbar-background;
-  border-bottom: solid 1px $front-porch-navbar-border;
-}
-
-.container-fluid{
+.container-fluid {
   padding: 0px !important;
-  margin: 0;
+  margin:  0;
 
-  nav{
+  .row {
+    margin-left:  0;
+    margin-right: 0;
+  }
+
+  nav {
     border-radius: 0px;
-    margin: 0 !important;
+    margin:        0 !important;
 
-    a{
+    a {
       color: $navbar-link;
     }
 
-    .active-link{
+    .active-link {
       color: $navbar-link-active !important;
     }
 
   }
 }
 
-.inline{
+.inline {
   display: inline-block;
 }
 
 .banner {
-  background: url(../static/home-2.jpg) repeat center center;
+  background:      url(../static/home-2.jpg) repeat center center;
   background-size: cover;
 
-  border-radius: 0 !important;
-  margin: 0 !important;
-  border-bottom: solid 1px $divider-color;
+  border-radius:   0 !important;
+  margin:          0 !important;
+  border-bottom:   solid 1px $divider-color;
 
   .content {
     padding-top: 110px;
-    height: 700px;
-    color: $primary-color-text;
+    height:      700px;
+    color:       $primary-color-text;
 
-    .call-to-action{
+    .call-to-action {
       background-color: rgba(0, 0, 0, 0.75);
-      min-height: 250px;
-      padding: 0px 36px 36px 36px;
+      min-height:       250px;
+      padding:          0px 36px 36px 36px;
 
-      h1{
+      h1 {
         font-size: 4.5rem;
-        color: $primary-color-light;
+        color:     $primary-color-light;
 
-        .highlight{
+        .highlight {
           color: $accent-color;
         }
 
@@ -67,32 +67,32 @@ body{
         font-size: 2.25rem;
       }
 
-      .form{
+      .form {
         margin-top: 48px;
 
-        div{
+        div {
           padding-right: 0px;
         }
 
-        .no-left-margin{
+        .no-left-margin {
           margin-left: 0;
         }
       }
 
     }
 
-    .btn-home{
+    .btn-home {
       background-color: $accent-color;
     }
 
-    .add-school-container{
-      margin-top: 28px;
-      border-bottom: solid 0.025rem rgba(255,255,255,0.76);
-      margin-left: 12px;
+    .add-school-container {
+      margin-top:    28px;
+      border-bottom: solid 0.025rem rgba(255, 255, 255, 0.76);
+      margin-left:   12px;
 
-      a{
-        color: $primary-color-text;
-        font-size: 1.55rem;
+      a {
+        color:           $primary-color-text;
+        font-size:       1.55rem;
         text-decoration: none;
       }
 

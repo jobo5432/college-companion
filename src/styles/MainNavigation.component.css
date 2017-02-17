@@ -1,3 +1,7 @@
 /* Main Palette */
 /* front porch (non-portal) pages */
 /* portal pages */
+.main-navigation {
+  border-bottom: solid 1px #f0f0f0;
+  height: 48px;
+}

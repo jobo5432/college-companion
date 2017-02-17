@@ -3,12 +3,19 @@ import Header from './common/Header.component';
 import InstitutionApi from '../api/mockInstitutionApi';
 
 class App extends React.Component {
+  constructor(props,context){
+    super(props, context);
+
+
+  }
+
+
   render() {
     return (
-      <div className="container-fluid">
-        <Header/>
-        {this.props.children}
-      </div>
+        <div className="container-fluid">
+          <Header/>
+          {this.props.children}
+        </div>
     );
   }
 }

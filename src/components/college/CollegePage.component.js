@@ -4,6 +4,9 @@ import {bindActionCreators} from 'redux';
 import * as institutionActions from '../../actions/institutionActions';
 import * as siteActions from '../../actions/siteActions';
 import FullPageLoader from '../common/FullPageLoader.component';
+import MainNavigation from './common/MainNavigation.component';
+import SearchResults from './common/SearchResults.component';
+import SearchJumbotron from './SearchJumbotron.component';
 
 class CollegePage extends React.Component {
   constructor(props, context) {
@@ -12,8 +15,8 @@ class CollegePage extends React.Component {
     this.state = {
       institution: {},
       subdomain  : this.props.params.subdomain,
-      site : {},
-      count: 0
+      site       : {},
+      count      : 0
     };
 
     this.props.siteActions.showLoader();
@@ -34,18 +37,24 @@ class CollegePage extends React.Component {
     this.setState({site: nextProps.site});
   }
 
-  componentDidUpdate(prevProps, prevState){
+  componentDidUpdate(prevProps, prevState) {
   }
 
   render() {
-
-    if(this.state.site.showLoader)
+    if (this.state.site.showLoader)
       return <FullPageLoader/>;
 
     return (
-      <div>Welcome to {this.state.institution.name}!
-        <br />
-        <button type="button" onClick={this.clicker}>Click me, please</button>
+      <div>
+        <div className="container-fluid">
+          <div className="row">
+            <MainNavigation/>
+          </div>
+          <div className="row">
+            <SearchJumbotron/>
+            <SearchResults/>
+          </div>
+        </div>
       </div>
     );
   }

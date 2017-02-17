@@ -11,7 +11,10 @@ $divider-color : #BDBDBD;
 /* front porch (non-portal) pages */
 $front-porch-background : #fafafa;
 $front-porch-navbar-background : #fefefe;
-$front-porch-navbar-border : #dadada;
+$front-porch-navbar-border : #f0f0f0;
 
 $navbar-link : $secondary-text-color;
 $navbar-link-active : $accent-color;
+
+/* portal pages */
+$default-border-color: #f0f0f0;
